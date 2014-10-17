@@ -3,8 +3,8 @@ Name:		okteta
 Version:	4.14.2
 Release:	1
 Epoch:		1
-Group:		Graphical desktop/KDE
 License:	GPLv2+
+Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
@@ -22,20 +22,21 @@ Okteta is a simple editor for the raw data of files. This type of program
 is also called hex editor or binary editor.
 
 %files
-%{_kde_bindir}/okteta
-%{_kde_bindir}/struct2osd.sh
-%{_kde_libdir}/kde4/libkbytearrayedit.so
-%{_kde_libdir}/kde4/oktetapart.so
+%doc %{_kde_docdir}/HTML/en/okteta
 %{_kde_applicationsdir}/okteta.desktop
 %{_kde_appsdir}/okteta
 %{_kde_appsdir}/oktetapart
-%{_kde_datadir}/config.kcfg/structviewpreferences.kcfg
+%{_kde_bindir}/okteta
+%{_kde_bindir}/struct2osd.sh
 %{_kde_configdir}/okteta-structures.knsrc
+%{_kde_datadir}/appdata/okteta.appdata.xml
+%{_kde_datadir}/config.kcfg/structviewpreferences.kcfg
+%{_kde_datadir}/mime/packages/okteta.xml
 %{_kde_iconsdir}/*/*/apps/okteta.png
+%{_kde_libdir}/kde4/libkbytearrayedit.so
+%{_kde_libdir}/kde4/oktetapart.so
 %{_kde_services}/kbytearrayedit.desktop
 %{_kde_services}/oktetapart.desktop
-%{_kde_datadir}/mime/packages/okteta.xml
-%doc %{_kde_docdir}/HTML/en/okteta
 
 #----------------------------------------------------------------------------
 
@@ -218,6 +219,7 @@ applications that use Okteta libraries.
 %changelog
 * Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.14.2-1
 - New version 4.14.2
+- Update files
 
 * Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.14.1-1
 - New version 4.14.1
