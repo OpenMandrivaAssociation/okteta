@@ -16,6 +16,10 @@ Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/applications/%{version}/src/%{name}
 BuildRequires:	pkgconfig(qca2)
 BuildRequires:	extra-cmake-modules5
 BuildRequires:	ninja
+BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(Qt5Gui)
+BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:	cmake(Qt5Designer)
 
 %description
 Okteta is a simple editor for the raw data of files. This type of program
