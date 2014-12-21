@@ -19,7 +19,7 @@ BuildRequires:	ninja
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5Gui)
 BuildRequires:	cmake(Qt5Widgets)
-BuildRequires:	cmake(Qt5Designer)
+BuildRequires:	cmake(Qt5Designer) qt5-designer
 
 %description
 Okteta is a simple editor for the raw data of files. This type of program
