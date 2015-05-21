@@ -34,6 +34,7 @@ BuildRequires:	cmake(KF5Parts)
 BuildRequires:	cmake(KF5Service)
 BuildRequires:	cmake(KF5WidgetsAddons)
 BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	pkgconfig(shared-mime-info)
 
 %description
 Okteta is a simple editor for the raw data of files. This type of program
