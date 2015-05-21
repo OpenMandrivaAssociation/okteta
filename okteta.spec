@@ -13,7 +13,7 @@ Url:		http://www.kde.org
 %define ftpdir stable
 %endif
 Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	pkgconfig(qca2)
+BuildRequires:	pkgconfig(qca2-qt5)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5Gui)
