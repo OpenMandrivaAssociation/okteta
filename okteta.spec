@@ -1,6 +1,6 @@
 Summary:	A simple HEX editor for KDE
 Name:		okteta
-Version:	15.04.0
+Version:	15.04.1
 Release:	1
 Epoch:		1
 License:	GPLv2+
@@ -12,10 +12,9 @@ Url:		http://www.kde.org
 %else
 %define ftpdir stable
 %endif
-Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(qca2)
 BuildRequires:	cmake(ECM)
-BuildRequires:	ninja
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5Gui)
 BuildRequires:	cmake(Qt5Widgets)
@@ -236,7 +235,7 @@ applications that use Okteta libraries.
 %cmake_kde5
 
 %build
-ninja -C build
+%ninja -C build
 
 %install
-DESTDIR="%{buildroot}" ninja install -C build
+%ninja_install -C build
