@@ -41,13 +41,13 @@ Okteta is a simple editor for the raw data of files. This type of program
 is also called hex editor or binary editor.
 
 %files
-%doc %{_kde_docdir}/HTML/en/okteta
+%doc %{_docdir}/HTML/en/okteta
 %{_datadir}/applications/org.kde.okteta.desktop
 %{_datadir}/okteta
 %{_datadir}/oktetapart
 %{_datadir}/kxmlgui5/okteta
 %{_bindir}/okteta
-%{_bindir}/struct2osd.sh
+%{_bindir}/struct2osd
 %{_sysconfdir}/xdg/okteta-structures.knsrc
 %{_datadir}/appdata/okteta.appdata.xml
 %{_datadir}/config.kcfg/structviewpreferences.kcfg
@@ -70,8 +70,8 @@ Obsoletes:	%{mklibname kasten2controllers 0} < 1:14.12.0
 Okteta shared library.
 
 %files -n %{libkasten3controllers}
-%{_kde_libdir}/libkasten3controllers.so.%{kasten3controllers_major}
-%{_kde_libdir}/libkasten3controllers.so.0.*
+%{_libdir}/libkasten3controllers.so.%{kasten3controllers_major}
+%{_libdir}/libkasten3controllers.so.0.*
 
 #----------------------------------------------------------------------------
 
@@ -88,8 +88,8 @@ Obsoletes:	%{mklibname kasten2core 0} < 1:14.12.0
 Okteta shared library.
 
 %files -n %{libkasten3core}
-%{_kde_libdir}/libkasten3core.so.%{kasten3core_major}
-%{_kde_libdir}/libkasten3core.so.0.*
+%{_libdir}/libkasten3core.so.%{kasten3core_major}
+%{_libdir}/libkasten3core.so.0.*
 
 #----------------------------------------------------------------------------
 
@@ -106,8 +106,8 @@ Obsoletes:	%{mklibname kasten2gui 0} < 1:14.12.0
 Okteta shared library.
 
 %files -n %{libkasten3gui}
-%{_kde_libdir}/libkasten3gui.so.%{kasten3gui_major}
-%{_kde_libdir}/libkasten3gui.so.0.*
+%{_libdir}/libkasten3gui.so.%{kasten3gui_major}
+%{_libdir}/libkasten3gui.so.0.*
 
 #----------------------------------------------------------------------------
 
@@ -124,8 +124,8 @@ Obsoletes:	%{mklibname kasten2okteta1controllers 0} < 1:14.12.0
 Okteta shared library.
 
 %files -n %{libkasten3okteta1controllers}
-%{_kde_libdir}/libkasten3okteta1controllers.so.%{kasten3okteta1controllers_major}
-%{_kde_libdir}/libkasten3okteta1controllers.so.0.*
+%{_libdir}/libkasten3okteta1controllers.so.%{kasten3okteta1controllers_major}
+%{_libdir}/libkasten3okteta1controllers.so.0.*
 
 #----------------------------------------------------------------------------
 
@@ -142,8 +142,8 @@ Obsoletes:	%{mklibname kasten2okteta1core 0} < 1:14.12.0
 Okteta shared library.
 
 %files -n %{libkasten3okteta1core}
-%{_kde_libdir}/libkasten3okteta1core.so.%{kasten3okteta1core_major}
-%{_kde_libdir}/libkasten3okteta1core.so.0.*
+%{_libdir}/libkasten3okteta1core.so.%{kasten3okteta1core_major}
+%{_libdir}/libkasten3okteta1core.so.0.*
 
 #----------------------------------------------------------------------------
 
@@ -160,8 +160,8 @@ Obsoletes:	%{mklibname kasten2okteta1gui 0} < 1:14.12.0
 Okteta shared library.
 
 %files -n %{libkasten3okteta1gui}
-%{_kde_libdir}/libkasten3okteta1gui.so.%{kasten3okteta1gui_major}
-%{_kde_libdir}/libkasten3okteta1gui.so.0.*
+%{_libdir}/libkasten3okteta1gui.so.%{kasten3okteta1gui_major}
+%{_libdir}/libkasten3okteta1gui.so.0.*
 
 #----------------------------------------------------------------------------
 
@@ -178,8 +178,8 @@ Obsoletes:	%{mklibname okteta1core 1} < 1:14.12.0
 Okteta shared library.
 
 %files -n %{libokteta2core}
-%{_kde_libdir}/libokteta2core.so.%{okteta2core_major}
-%{_kde_libdir}/libokteta2core.so.0.*
+%{_libdir}/libokteta2core.so.%{okteta2core_major}
+%{_libdir}/libokteta2core.so.0.*
 
 #----------------------------------------------------------------------------
 
@@ -196,8 +196,8 @@ Obsoletes:	%{mklibname okteta1gui 1} < 1:14.12.0
 Okteta shared library.
 
 %files -n %{libokteta2gui}
-%{_kde_libdir}/libokteta2gui.so.%{okteta2gui_major}
-%{_kde_libdir}/libokteta2gui.so.0.*
+%{_libdir}/libokteta2gui.so.%{okteta2gui_major}
+%{_libdir}/libokteta2gui.so.0.*
 
 #----------------------------------------------------------------------------
 
@@ -228,6 +228,14 @@ applications that use Okteta libraries.
 %{_libdir}/libokteta2core.so
 %{_libdir}/libokteta2gui.so
 %{_libdir}/qt5/plugins/designer/oktetadesignerplugin.so
+%{_libdir}/cmake/OktetaKastenGui
+%{_libdir}/cmake/OktetaKastenCore
+%{_libdir}/cmake/OktetaKastenControllers
+%{_libdir}/cmake/OktetaGui
+%{_libdir}/cmake/OktetaCore
+%{_libdir}/cmake/KastenGui
+%{_libdir}/cmake/KastenCore
+%{_libdir}/cmake/KastenControllers
 
 #----------------------------------------------------------------------------
 
