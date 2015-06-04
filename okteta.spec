@@ -1,6 +1,6 @@
 Summary:	A simple HEX editor for KDE
 Name:		okteta
-Version:	15.04.1
+Version:	15.04.2
 Release:	1
 Epoch:		1
 License:	GPLv2+
