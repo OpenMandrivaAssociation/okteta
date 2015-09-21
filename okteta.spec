@@ -1,7 +1,7 @@
 Summary:	A simple HEX editor for KDE
 Name:		okteta
-Version:	15.04.3
-Release:	3
+Version:	15.08.1
+Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -17,8 +17,14 @@ BuildRequires:	pkgconfig(qca2-qt5)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5Gui)
+BuildRequires:	cmake(Qt5Network)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5Designer)
+BuildRequires:	cmake(Qt5PrintSupport)
+BuildRequires:	cmake(Qt5Script)
+BuildRequires:	cmake(Qt5ScriptTools)
+BuildRequires:	cmake(Qt5Test)
+BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(KF5Bookmarks)
 BuildRequires:	cmake(KF5Codecs)
 BuildRequires:	cmake(KF5Completion)
