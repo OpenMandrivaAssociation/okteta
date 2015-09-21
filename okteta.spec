@@ -50,7 +50,7 @@ is also called hex editor or binary editor.
 %doc %{_docdir}/HTML/en/okteta
 %{_datadir}/applications/org.kde.okteta.desktop
 %{_datadir}/okteta
-%{_datadir}/oktetapart
+%{_datadir}/kxmlgui5/oktetapart
 %{_datadir}/kxmlgui5/okteta
 %{_bindir}/okteta
 %{_bindir}/struct2osd
