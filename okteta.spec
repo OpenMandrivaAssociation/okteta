@@ -55,7 +55,7 @@ is also called hex editor or binary editor.
 %{_bindir}/okteta
 %{_bindir}/struct2osd
 %{_sysconfdir}/xdg/okteta-structures.knsrc
-%{_datadir}/appdata/*okteta.appdata.xml
+%{_datadir}/metainfo/org.kde.okteta.appdata.xml
 %{_datadir}/config.kcfg/structviewpreferences.kcfg
 %{_datadir}/mime/packages/okteta.xml
 %{_iconsdir}/*/*/apps/okteta.png
