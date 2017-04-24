@@ -1,18 +1,13 @@
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	A simple HEX editor for KDE
 Name:		okteta
-Version:	16.12.2
+Version:	17.04.0
 Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
-%define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
-%if %{is_beta}
-%define ftpdir unstable
-%else
-%define ftpdir stable
-%endif
-Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(qca2-qt5)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
@@ -46,8 +41,7 @@ BuildRequires:	pkgconfig(shared-mime-info)
 Okteta is a simple editor for the raw data of files. This type of program
 is also called hex editor or binary editor.
 
-%files
-%doc %{_docdir}/HTML/en/okteta
+%files -f all.lang
 %{_datadir}/applications/org.kde.okteta.desktop
 %{_datadir}/okteta
 %{_datadir}/kxmlgui5/oktetapart
@@ -254,3 +248,10 @@ applications that use Okteta libraries.
 
 %install
 %ninja_install -C build
+%find_lang libkasten
+%find_lang liboktetacore
+%find_lang liboktetagui
+%find_lang liboktetakasten
+%find_lang okteta --with-html
+%find_lang oktetapart
+cat *.lang >all.lang
