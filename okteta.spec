@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	A simple HEX editor for KDE
 Name:		okteta
-Version:	17.08.3
+Version:	17.11.90
 Release:	1
 Epoch:		1
 License:	GPLv2+
@@ -227,7 +227,7 @@ applications that use Okteta libraries.
 %{_libdir}/libkasten3okteta1gui.so
 %{_libdir}/libokteta2core.so
 %{_libdir}/libokteta2gui.so
-%{_libdir}/qt5/plugins/designer/oktetadesignerplugin.so
+%{_libdir}/qt5/plugins/designer/oktetawidgets.so
 %{_libdir}/cmake/OktetaKastenGui
 %{_libdir}/cmake/OktetaKastenCore
 %{_libdir}/cmake/OktetaKastenControllers
