@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   okteta-17.12.1.tar.xz: 649edb53c8a64432616a272c71fea00f9ea8283c
+sources:
+  okteta-17.12.2.tar.xz: f230a3b7c835fd31fa281b7b49c290363f8ea18f
