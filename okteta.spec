@@ -1,13 +1,13 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	A simple HEX editor for KDE
 Name:		okteta
-Version:	17.12.3
+Version:	0.25.0
 Release:	1
 Epoch:		2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
-Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/%{name}/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(qca2-qt5)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
