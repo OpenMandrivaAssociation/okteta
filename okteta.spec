@@ -45,13 +45,11 @@ is also called hex editor or binary editor.
 %files -f all.lang
 %{_datadir}/applications/org.kde.okteta.desktop
 %{_datadir}/okteta
-%{_datadir}/kxmlgui5/oktetapart
-%{_datadir}/kxmlgui5/okteta
 %{_bindir}/okteta
 %{_bindir}/struct2osd
 %{_sysconfdir}/xdg/okteta-structures.knsrc
 %{_datadir}/metainfo/org.kde.okteta.appdata.xml
-%{_datadir}/config.kcfg/structviewpreferences.kcfg
+%{_datadir}/config.kcfg/structureviewpreferences.kcfg
 %{_datadir}/mime/packages/okteta.xml
 %{_iconsdir}/*/*/apps/okteta.png
 %{_libdir}/qt5/plugins/oktetapart.so
