@@ -3,7 +3,7 @@ Summary:	A simple HEX editor for KDE
 Name:		okteta
 Version:	0.25.0
 Release:	1
-Epoch:		2
+Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
