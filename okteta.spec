@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	A simple HEX editor for KDE
 Name:		okteta
-Version:	0.25.0
+Version:	0.25.3
 Release:	1
 Epoch:		2
 License:	GPLv2+
