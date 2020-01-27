@@ -1,8 +1,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	A simple HEX editor for KDE
 Name:		okteta
-Version:	0.25.3
-Release:	2
+Version:	0.26.2
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -52,165 +52,166 @@ is also called hex editor or binary editor.
 %{_datadir}/config.kcfg/structureviewpreferences.kcfg
 %{_datadir}/mime/packages/okteta.xml
 %{_iconsdir}/*/*/apps/okteta.png
-%{_libdir}/qt5/plugins/oktetapart.so
+%{_datadir}/kservices5/oktetapart.desktop
+%{_libdir}/qt5/plugins/kf5/parts/oktetapart.so
 
 #----------------------------------------------------------------------------
 
-%define kasten3controllers_major 3
-%define libkasten3controllers %mklibname kasten3controllers %{kasten3controllers_major}
+%define kasten4controllers_major 0
+%define libkasten4controllers %mklibname Kasten4Controllers %{kasten4controllers_major}
 
-%package -n %{libkasten3controllers}
+%package -n %{libkasten4controllers}
 Summary:	Okteta shared library
 Group:		System/Libraries
 Obsoletes:	%{mklibname kasten1controllers 0} < 1:4.10.0
 Obsoletes:	%{mklibname kasten2controllers 0} < 1:14.12.0
+Obsoletes:	%{mklibname kasten3controllers 3} < 3:0.26.2
 
-%description -n %{libkasten3controllers}
+%description -n %{libkasten4controllers}
 Okteta shared library.
 
-%files -n %{libkasten3controllers}
-%{_libdir}/libkasten3controllers.so.%{kasten3controllers_major}
-%{_libdir}/libkasten3controllers.so.0.*
+%files -n %{libkasten4controllers}
+%{_libdir}/libKasten4Controllers.so.%{kasten4controllers_major}*
 
 #----------------------------------------------------------------------------
 
-%define kasten3core_major 3
-%define libkasten3core %mklibname kasten3core %{kasten3core_major}
+%define kasten4core_major 0
+%define libkasten4core %mklibname Kasten4Core %{kasten4core_major}
 
-%package -n %{libkasten3core}
+%package -n %{libkasten4core}
 Summary:	Okteta shared library
 Group:		System/Libraries
 Obsoletes:	%{mklibname kasten1core 0} < 1:4.10.0
 Obsoletes:	%{mklibname kasten2core 0} < 1:14.12.0
+Obsoletes:	%{mklibname kasten3core 3} < 3:0.26.2
 
-%description -n %{libkasten3core}
+%description -n %{libkasten4core}
 Okteta shared library.
 
-%files -n %{libkasten3core}
-%{_libdir}/libkasten3core.so.%{kasten3core_major}
-%{_libdir}/libkasten3core.so.0.*
+%files -n %{libkasten4core}
+%{_libdir}/libKasten4Core.so.%{kasten4core_major}*
 
 #----------------------------------------------------------------------------
 
-%define kasten3gui_major 3
-%define libkasten3gui %mklibname kasten3gui %{kasten3gui_major}
+%define kasten4gui_major 0
+%define libkasten4gui %mklibname Kasten4Gui %{kasten4gui_major}
 
-%package -n %{libkasten3gui}
+%package -n %{libkasten4gui}
 Summary:	Okteta shared library
 Group:		System/Libraries
 Obsoletes:	%{mklibname kasten1gui 0} < 1:4.10.0
 Obsoletes:	%{mklibname kasten2gui 0} < 1:14.12.0
+Obsoletes:	%{mklibname kasten3gui 3} < 3:0.26.2
 
-%description -n %{libkasten3gui}
+%description -n %{libkasten4gui}
 Okteta shared library.
 
-%files -n %{libkasten3gui}
-%{_libdir}/libkasten3gui.so.%{kasten3gui_major}
-%{_libdir}/libkasten3gui.so.0.*
+%files -n %{libkasten4gui}
+%{_libdir}/libKasten4Gui.so.%{kasten4gui_major}*
 
 #----------------------------------------------------------------------------
 
-%define kasten3okteta1controllers_major 1
-%define libkasten3okteta1controllers %mklibname kasten3okteta1controllers %{kasten3okteta1controllers_major}
+%define kasten4okteta2controllers_major 0
+%define libkasten4okteta2controllers %mklibname Kasten4Okteta2Controllers %{kasten4okteta2controllers_major}
 
-%package -n %{libkasten3okteta1controllers}
+%package -n %{libkasten4okteta2controllers}
 Summary:	Okteta shared library
 Group:		System/Libraries
 Obsoletes:	%{mklibname kasten1okteta1controllers 0} < 1:4.10.0
 Obsoletes:	%{mklibname kasten2okteta1controllers 0} < 1:14.12.0
+Obsoletes:	%{mklibname kasten3okteta1controllers 1} < 3:0.26.2
 
-%description -n %{libkasten3okteta1controllers}
+%description -n %{libkasten4okteta2controllers}
 Okteta shared library.
 
-%files -n %{libkasten3okteta1controllers}
-%{_libdir}/libkasten3okteta1controllers.so.%{kasten3okteta1controllers_major}
-%{_libdir}/libkasten3okteta1controllers.so.0.*
+%files -n %{libkasten4okteta2controllers}
+%{_libdir}/libKasten4Okteta2Controllers.so.%{kasten4okteta2controllers_major}*
 
 #----------------------------------------------------------------------------
 
-%define kasten3okteta1core_major 1
-%define libkasten3okteta1core %mklibname kasten3okteta1core %{kasten3okteta1core_major}
+%define kasten4okteta2core_major 0
+%define libkasten4okteta2core %mklibname Kasten4Okteta2Core %{kasten4okteta2core_major}
 
-%package -n %{libkasten3okteta1core}
+%package -n %{libkasten4okteta2core}
 Summary:	Okteta shared library
 Group:		System/Libraries
 Obsoletes:	%{mklibname kasten1okteta1core 0} < 1:4.10.0
 Obsoletes:	%{mklibname kasten2okteta1core 0} < 1:14.12.0
+Obsoletes:	%{mklibname kasten3okteta1core 1} < 3:0.26.2
 
-%description -n %{libkasten3okteta1core}
+%description -n %{libkasten4okteta2core}
 Okteta shared library.
 
-%files -n %{libkasten3okteta1core}
-%{_libdir}/libkasten3okteta1core.so.%{kasten3okteta1core_major}
-%{_libdir}/libkasten3okteta1core.so.0.*
+%files -n %{libkasten4okteta2core}
+%{_libdir}/libKasten4Okteta2Core.so.%{kasten4okteta2core_major}*
 
 #----------------------------------------------------------------------------
 
-%define kasten3okteta1gui_major 1
-%define libkasten3okteta1gui %mklibname kasten3okteta1gui %{kasten3okteta1gui_major}
+%define kasten4okteta2gui_major 0
+%define libkasten4okteta2gui %mklibname Kasten4Okteta2Gui %{kasten4okteta2gui_major}
 
-%package -n %{libkasten3okteta1gui}
+%package -n %{libkasten4okteta2gui}
 Summary:	Okteta shared library
 Group:		System/Libraries
 Obsoletes:	%{mklibname kasten1okteta1gui 0} < 1:4.10.0
 Obsoletes:	%{mklibname kasten2okteta1gui 0} < 1:14.12.0
+Obsoletes:	%{mklibname kasten3okteta1gui 1} < 3:0.26.2
 
-%description -n %{libkasten3okteta1gui}
+%description -n %{libkasten4okteta2gui}
 Okteta shared library.
 
-%files -n %{libkasten3okteta1gui}
-%{_libdir}/libkasten3okteta1gui.so.%{kasten3okteta1gui_major}
-%{_libdir}/libkasten3okteta1gui.so.0.*
+%files -n %{libkasten4okteta2gui}
+%{_libdir}/libKasten4Okteta2Gui.so.%{kasten4okteta2gui_major}*
 
 #----------------------------------------------------------------------------
 
-%define okteta2core_major 2
-%define libokteta2core %mklibname okteta2core %{okteta2core_major}
+%define okteta3core_major 0
+%define libokteta3core %mklibname Okteta3Core %{okteta3core_major}
 
-%package -n %{libokteta2core}
+%package -n %{libokteta3core}
 Summary:	Okteta shared library
 Group:		System/Libraries
 Obsoletes:	%{mklibname okteta1core 0} < 1:4.10.0
 Obsoletes:	%{mklibname okteta1core 1} < 1:14.12.0
+Obsoletes:	%{mklibname okteta2core 1} < 3:0.26.2
 
-%description -n %{libokteta2core}
+%description -n %{libokteta3core}
 Okteta shared library.
 
-%files -n %{libokteta2core}
-%{_libdir}/libokteta2core.so.%{okteta2core_major}
-%{_libdir}/libokteta2core.so.0.*
+%files -n %{libokteta3core}
+%{_libdir}/libOkteta3Core.so.%{okteta3core_major}*
 
 #----------------------------------------------------------------------------
 
-%define okteta2gui_major 2
-%define libokteta2gui %mklibname okteta2gui %{okteta2gui_major}
+%define okteta3gui_major 0
+%define libokteta3gui %mklibname Okteta3Gui %{okteta3gui_major}
 
-%package -n %{libokteta2gui}
+%package -n %{libokteta3gui}
 Summary:	Okteta shared library
 Group:		System/Libraries
 Obsoletes:	%{mklibname okteta1gui 0} < 1:4.10.0
 Obsoletes:	%{mklibname okteta1gui 1} < 1:14.12.0
+Obsoletes:	%{mklibname okteta2gui 2} < 3:0.26.2
 
-%description -n %{libokteta2gui}
+%description -n %{libokteta3gui}
 Okteta shared library.
 
-%files -n %{libokteta2gui}
-%{_libdir}/libokteta2gui.so.%{okteta2gui_major}
-%{_libdir}/libokteta2gui.so.0.*
+%files -n %{libokteta3gui}
+%{_libdir}/libOkteta3Gui.so.%{okteta3gui_major}*
 
 #----------------------------------------------------------------------------
 
 %package devel
 Summary:	Development files for Okteta
 Group:		Development/KDE and Qt
-Requires:	%{libkasten3controllers} = %{EVRD}
-Requires:	%{libkasten3core} = %{EVRD}
-Requires:	%{libkasten3gui} = %{EVRD}
-Requires:	%{libkasten3okteta1controllers} = %{EVRD}
-Requires:	%{libkasten3okteta1core} = %{EVRD}
-Requires:	%{libkasten3okteta1gui} = %{EVRD}
-Requires:	%{libokteta2core} = %{EVRD}
-Requires:	%{libokteta2gui} = %{EVRD}
+Requires:	%{libkasten4controllers} = %{EVRD}
+Requires:	%{libkasten4core} = %{EVRD}
+Requires:	%{libkasten4gui} = %{EVRD}
+Requires:	%{libkasten4okteta2controllers} = %{EVRD}
+Requires:	%{libkasten4okteta2core} = %{EVRD}
+Requires:	%{libkasten4okteta2gui} = %{EVRD}
+Requires:	%{libokteta3core} = %{EVRD}
+Requires:	%{libokteta3gui} = %{EVRD}
 
 %description devel
 This package includes the header files you will need to compile
@@ -218,14 +219,14 @@ applications that use Okteta libraries.
 
 %files devel
 %{_includedir}/*
-%{_libdir}/libkasten3controllers.so
-%{_libdir}/libkasten3core.so
-%{_libdir}/libkasten3gui.so
-%{_libdir}/libkasten3okteta1controllers.so
-%{_libdir}/libkasten3okteta1core.so
-%{_libdir}/libkasten3okteta1gui.so
-%{_libdir}/libokteta2core.so
-%{_libdir}/libokteta2gui.so
+%{_libdir}/libKasten4Controllers.so
+%{_libdir}/libKasten4Core.so
+%{_libdir}/libKasten4Gui.so
+%{_libdir}/libKasten4Okteta2Controllers.so
+%{_libdir}/libKasten4Okteta2Core.so
+%{_libdir}/libKasten4Okteta2Gui.so
+%{_libdir}/libOkteta3Core.so
+%{_libdir}/libOkteta3Gui.so
 %{_libdir}/qt5/plugins/designer/oktetawidgets.so
 %{_libdir}/cmake/OktetaKastenGui
 %{_libdir}/cmake/OktetaKastenCore
@@ -235,6 +236,10 @@ applications that use Okteta libraries.
 %{_libdir}/cmake/KastenGui
 %{_libdir}/cmake/KastenCore
 %{_libdir}/cmake/KastenControllers
+%{_libdir}/pkgconfig/OktetaCore.pc
+%{_libdir}/pkgconfig/OktetaGui.pc
+%{_libdir}/qt5/mkspecs/modules/qt_OktetaCore.pri
+%{_libdir}/qt5/mkspecs/modules/qt_OktetaGui.pri
 
 #----------------------------------------------------------------------------
 

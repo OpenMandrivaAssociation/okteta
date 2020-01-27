@@ -1,6 +1,2 @@
-removed_sources:
-  okteta-0.25.0.tar.xz: 03cdd4d711a6eca6239711c5f105121002aec7cf
-  okteta-17.12.1.tar.xz: 649edb53c8a64432616a272c71fea00f9ea8283c
-  okteta-17.12.2.tar.xz: f230a3b7c835fd31fa281b7b49c290363f8ea18f
 sources:
-  okteta-0.25.3.tar.xz: 3fd0e0c8a2077ccb2bb85ba97df6021ac03cd827
+  okteta-0.26.2.tar.xz: 2be258d11291cc840c760df6cf3eee8d6b78b3a1
