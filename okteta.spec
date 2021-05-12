@@ -47,7 +47,7 @@ is also called hex editor or binary editor.
 %{_datadir}/okteta
 %{_bindir}/okteta
 %{_bindir}/struct2osd
-%{_sysconfdir}/xdg/okteta-structures.knsrc
+%{_datadir}/knsrcfiles/okteta-structures.knsrc
 %{_datadir}/metainfo/org.kde.okteta.appdata.xml
 %{_datadir}/config.kcfg/structureviewpreferences.kcfg
 %{_datadir}/mime/packages/okteta.xml
