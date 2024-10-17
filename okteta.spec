@@ -6,7 +6,7 @@ Release:	2
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://www.kde.org
+Url:		https://www.kde.org
 Source0:	http://download.kde.org/%{stable}/%{name}/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(qca2-qt5)
 BuildRequires:	cmake(ECM)
